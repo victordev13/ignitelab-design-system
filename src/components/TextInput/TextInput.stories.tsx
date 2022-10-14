@@ -15,9 +15,7 @@ export default {
   },
   argTypes: {
     children: {
-      table: {
-        disable: true,
-      },
+      control: false,
     },
   },
 } as Meta<TextInputRootProps>;

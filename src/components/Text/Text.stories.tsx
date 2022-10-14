@@ -11,10 +11,16 @@ export default {
     size: {
       options: ['sm', 'md', 'lg'],
       control: {
-        type: 'inline-radio'
-      }
-    }
-  }
+        type: 'inline-radio',
+      },
+    },
+    children: {
+      control: false,
+    },
+    asChild: {
+      control: false,
+    },
+  },
 } as Meta<TextProps>;
 
 export const Default: StoryObj<TextProps> = {};
@@ -34,15 +40,6 @@ export const Large: StoryObj<TextProps> = {
 export const CustomComponent: StoryObj<TextProps> = {
   args: {
     asChild: true,
-    children: (
-      <p>Custom</p>
-    )
+    children: <p>Custom</p>,
   },
-  argTypes: {
-    children: {
-      control: {
-        disable: true
-      }
-    }
-  }
 };
